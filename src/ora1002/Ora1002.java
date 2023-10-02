@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ora1002 {
 
     private static Scanner src = new Scanner(in);
-    private static String[] pakli = {};
+    private static String[] pakli = new String[22];
     
     public static void main(String[] args) {
 
@@ -34,22 +34,42 @@ public class Ora1002 {
         
     }
     
-    public static void kever() {
-        int oszlop = 0;
-        
+    public static void kirak() {
+        for (int i = 0; i < pakli.length; i++) {
+            System.out.printf(pakli[i] + "d8%");
+        }
     }
 
-    public static int melyik(int oszlop) {
-        
-        while (oszlop <= 2 && oszlop >= 0) {            
-            sc.nextInt();
+    public static int melyik() {
+        int oszlop = 0;
+        while (oszlop <= 2 && oszlop >= 0) {  
+            System.out.println("Kérem adja meg az oszlopot");
+            oszlop = src.nextInt();
         }
         return oszlop;
     }
 
-    public static void kirak() {
-        
-
+    public static void kever(int oszlop) {
+        String[] ujPakli = new String[22];
+        for (int i = 1; i < 10; i++) {
+            
+        }
+        switch (oszlop) {
+            case 1:
+                ujPakli[i] = (20 - (i - 1) * 3);
+                ujPakli[i+7] = (19 - (i - 1) * 3);
+                ujPakli[i+14] = (21 - (i - 1) * 3);
+                
+            case 2:
+                ujPakli[i] = (19 - (i - 1) * 3);
+                ujPakli[i+7] = (20 - (i - 1) * 3);
+                ujPakli[i+14] = (21 - (i - 1) * 3);
+                
+            case 3:
+                ujPakli[i] = (19 - (i - 1) * 3);
+                ujPakli[i+7] = (21 - (i - 1) * 3);
+                ujPakli[i+14] = (20 - (i - 1) * 3);
+        }
     }
 
     public static void ezVolt() {
